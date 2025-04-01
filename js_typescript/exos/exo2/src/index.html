@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2</title>
+    <script type="module" src="assets/js/main.mjs"></script>
+</head>
+<body>
+    <main>
+        <h1>Exercice 2 - Liste de contacts</h1>
+        <hr>
+        <form action="">
+            <div>
+                <label for="lastname">Nom :</label>
+                <input type="text" name="lastname" id="lastname">
+                <span style="color: red;" id="lastname-error"></span>
+            </div>
+            <div>
+                <label for="firstname">Prénom :</label>
+                <input type="text" name="firstname" id="firstname">
+                <span style="color: red;" id="firstname-error"></span>
+            </div>
+            <div>
+                <label for="birthdate">Date de naissance :</label>
+                <input type="date" name="birthdate" id="birthdate">
+            </div>
+            <div>
+                <label for="mail">E-mail :</label>
+                <input type="text" name="mail" id="mail">
+            </div>
+            <div>
+                <label for="phone">Téléphone :</label>
+                <input type="text" name="phone" id="phone">
+            </div>
+            <p style="color: red;" id="error"></p>
+            <button>Envoyer</button>
+        </form>
+        <hr>
+        <h2>Contacts : <span id="count"></span></h2>
+        <table id="contacts">
+            <thead>
+                <tr>
+                    <th>ID <button id="sort-id">^</button></th>
+                    <th>Nom <button id="sort-lastname">^</button></th>
+                    <th>Prénom <button id="sort-firstname">^</button></th>
+                    <th>Date de naissance <button id="sort-birthdate">^</button></th>
+                    <th>E-mail <button id="sort-mail">^</button></th>
+                    <th>Téléphone <button id="sort-phone">^</button></th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+</body>
+</html>

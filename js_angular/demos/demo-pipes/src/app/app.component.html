@@ -1,0 +1,16 @@
+<h1>Demo pipes</h1>
+<hr>
+<h2>Formatté avec une méthode</h2>
+<ul>
+  <li *ngFor="let firstName of firstNames">{{ toCapitalized(firstName) }}</li>
+</ul>
+<hr>
+<app-other></app-other>
+<hr>
+<h2>Utilisation du pipe sliceArray avec une valeur dynamique</h2>
+<input type="number" name="number" id="number" [(ngModel)] = "howMany">
+<ul>
+  <li *ngFor="let firstName of firstNames | sliceArray: howMany">{{ firstName | toCapitalize }}</li>
+</ul>
+<hr>
+<button (click)="onClickDelete()">Supprimer le dernier prénom</button>

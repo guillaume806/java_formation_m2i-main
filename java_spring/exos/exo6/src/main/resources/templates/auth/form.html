@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${mode.equals('signin') ? 'Connexion' : 'Créer un compte'}"></title>
+    <th:block th:replace="~{home :: BootstrapImports}" />
+</head>
+<body>
+<header th:insert="~{home :: nav}"></header>
+<main>
+    <h1 th:text="${mode.equals('signin') ? 'Connexion' : 'Créer un compte'}"></h1>
+    <hr>
+    <form th:action="@{/auth/{url}(url = ${mode})}" th:object="${authRequest}" method="post">
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" th:field="*{login}">
+        </div>
+        <div>
+            <label for="password">Mot de passe :</label>
+            <input type="password" name="password" id="password" th:field="*{password}">
+        </div>
+        <div>
+            <button>Envoyer</button>
+        </div>
+    </form>
+    <p th:if="${mode.equals('signin')}">Pas encore de compte ? <a th:href="@{/auth/signup}">Inscrivez-vous</a></p>
+    <p th:unless="${mode.equals('signin')}">Déjà un compte ? <a th:href="@{/auth/signin}">Connectez-vous</a></p>
+</main>
+</body>
+</html>

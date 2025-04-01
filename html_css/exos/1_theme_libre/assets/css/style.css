@@ -1,0 +1,204 @@
+/* Général */
+
+body,
+html {
+    margin: 0;
+}
+
+body {
+    background-color: lightyellow;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+header,
+main,
+footer {
+    padding: 0 5%;
+}
+
+
+section {
+    margin: auto;
+}
+
+/* Header et navbar */
+
+header {
+    background-color: rgb(218, 117, 23);
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+nav li {
+    min-width: 4rem;
+    list-style-type: none;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+    margin-top: 1rem;
+    min-height: 50px;
+    background-color: rgb(218, 117, 23);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer p {
+    font-size: smaller;
+    display: inline-block;
+}
+
+footer img {
+    height: 45px;
+}
+
+#copyright {
+    color: lightgoldenrodyellow;
+    font-size: x-small;
+}
+
+
+/* main */
+
+/* Accueil */
+
+.home-image {
+    background-image: url("/assets/img/accueil.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#intro {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#intro h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    color: white;
+    margin: 10%;
+}
+
+#accueil {
+    max-width: 80%;
+    margin: auto;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#accueil h2 {
+    text-align: center;
+}
+
+#infos>div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+#horaires,
+#tarifs {
+    margin: 0.5rem;
+}
+
+/* section avec tableau */
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    text-align: center;
+    border: 1px solid black;
+    min-width: 100px;
+    padding: 5px 10px;
+}
+
+/* sections à images */
+
+#animaux img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+#animaux div {
+    display: inline-block;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    background-color: rgb(241, 191, 141);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#animaux div:hover {
+    transform: scale(1.1);
+}
+
+#animaux h3 {
+    text-align: center;
+}
+
+/* Section formulaire */
+
+.formulaire {
+    justify-content: center;
+}
+
+form div {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+fieldset {
+    padding: 1rem;
+}
+
+fieldset > div {
+    display: flex;
+    flex-flow: column nowrap;
+    gap : 0.5rem;
+}
+
+form button {
+    padding: 1rem;
+}

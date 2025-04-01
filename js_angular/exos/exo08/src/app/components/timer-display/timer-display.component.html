@@ -1,0 +1,12 @@
+<h2>
+    Minuteur n°{{ timerIndex }} - 
+    <span *ngIf="actualValue > 0; else elseblock">
+        {{ timer.hours }} : {{ timer.minutes }} : {{ timer.seconds }}
+        <button (click)="onClickCancel()">Annuler</button>
+    </span>
+</h2>
+
+
+<ng-template #elseblock>
+    <button (click)="onClickDelete()">Terminé !</button>
+</ng-template>

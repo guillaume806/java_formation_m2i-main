@@ -1,0 +1,12 @@
+<div class="background" (click)="onClickClose($event)">
+    <div class="content">
+        <div class="header">
+            <h2>{{ title }}</h2>
+            <button class="btn-close" (click)="onClickClose()"></button>
+        </div>
+        <hr>
+        <div>
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
